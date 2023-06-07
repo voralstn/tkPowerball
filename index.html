@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Player</title>
+  <style>
+    #video-container {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <button id="start-button">Start</button>
+  <div id="video-container">
+    <iframe id="video-iframe" src="" width="" height="" scrolling="no" frameborder="0" allow="autoplay; fullscreen; encrypted-media"></iframe>
+  </div>
+
+  <script>
+    var startButton = document.getElementById('start-button');
+    var videoContainer = document.getElementById('video-container');
+    var videoIframe = document.getElementById('video-iframe');
+
+    startButton.addEventListener('click', function() {
+      videoContainer.style.display = 'block';
+      videoIframe.src = 'http://game.tgame365.com/powerball/frame';
+      // Set the desired width and height for the video
+      videoIframe.width = '640';
+      videoIframe.height = '480';
+    });
+  </script>
+</body>
+</html>
